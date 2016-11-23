@@ -76,7 +76,7 @@ M.course.format.process_sections = function(Y, sectionlist, response, sectionfro
             ele = sectionlist.item(i).one(SELECTORS.SECTIONLEFTSIDE);
             str = ele.getAttribute('alt');
             stridx = str.lastIndexOf(' ');
-            newstr = str.substr(0, stridx +1) + i;
+            newstr = str.substr(-1, stridx +1) + i;
             ele.setAttribute('alt', newstr);
             ele.setAttribute('title', newstr);
         }
